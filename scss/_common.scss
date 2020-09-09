@@ -1,0 +1,62 @@
+%sprite {
+  background: url(../images/sprite.png) 0 0 no-repeat;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  background: $white;
+  @include sizing;
+}
+
+body {
+  font: #{$fontSize}/#{$lineHeight} $fontFamily;
+  color: $text;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.button {
+  color: $white;
+  background: $link;
+  height: 58px;
+  border: 2px solid $link;
+  font: $f-medium 22px $fontCaption;
+  padding: 0 21px;
+  @include transition(
+    #{color 0.1s linear,
+    background-color 0.1s linear,
+    border-color 0.1s linear}
+  );
+  @include border-radius(5px);
+  @include sizing;
+  &:hover {
+    background: $linkHover;
+    border-color: $linkHover;
+  }
+  &:active {
+    background: $linkActive;
+    border-color: $linkActive;
+  }
+}
+a.button {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 54px;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+  &:active {
+    color: $white;
+  }
+}
+
+.animation-fadein {
+  opacity: 0;
+}
+
+.animation-fadein.animate__animated {
+  opacity: 1;
+}

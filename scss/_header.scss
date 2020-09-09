@@ -1,0 +1,41 @@
+header {
+  padding: 104px 10px;
+  background-color: black;
+  background: url("https://i.imgur.com/32vl8OH.jpg");
+  // background: url("https://i.imgur.com/Rihdbaa.jpg");
+  background-attachment: fixed;
+  height: 100vh;
+  @include flexCenter(row);
+  .main-flexbox {
+    font: 24px/36px $fontCaption;
+    color: $white;
+    max-width: $wrap;
+    @include flexCenter(row);
+    @include sizing;
+    @include bgsize;
+    h1 {
+      font-size: 48px;
+      line-height: 150%;
+      font-weight: $f-medium;
+      margin-bottom: 38px;
+      span {
+        font-weight: $f-extra-light;
+      }
+    }
+    .buttons-wrapper {
+      padding-top: 53px;
+      .button-stripe {
+        margin-left: 14px;
+      }
+    }
+    p {
+      font-weight: $f-medium;
+    }
+    .header-left {
+      width: 70%;
+    }
+    .header-img {
+      max-height: 800px;
+    }
+  }
+}

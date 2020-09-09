@@ -1,0 +1,33 @@
+@mixin sizing($boxsizing: border-box) {
+  -moz-box-sizing: $boxsizing;
+  -webkit-box-sizing: $boxsizing;
+  box-sizing: $boxsizing;
+}
+
+@mixin bgsize($string: cover) {
+  -moz-background-size: $string;
+  -webkit-background-size: $string;
+  -o-background-size: $string;
+  background-size: $string;
+}
+
+@mixin border-radius($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($string) {
+  -moz-transition: $string;
+  -ms-transition: $string;
+  -o-transition: $string;
+  -webkit-transition: $string;
+  transition: $string;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

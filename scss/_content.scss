@@ -1,0 +1,133 @@
+.odd-background-color {
+  background-color: #f4f4f4;
+}
+
+.features-list {
+  .bottom-border-grey {
+    border-bottom: solid 6px #f4f4f4;
+  }
+  .bottom-border-dark {
+    border-bottom: solid 6px #dcdcdc;
+  }
+  @include flexCenter(row);
+  flex-wrap: wrap;
+  .feature-list-left {
+    max-width: 40%;
+    h3 {
+      color: $black;
+      text-transform: uppercase;
+      font-size: 300%;
+      line-height: 150%;
+      text-align: center;
+      font-weight: $f-bold;
+      padding-bottom: 43px;
+      margin-bottom: 43px;
+    }
+    p {
+      font-size: 200%;
+      line-height: 150%;
+    }
+  }
+  .feature-list-right {
+    max-width: 40%;
+    margin: 100px;
+  }
+  .feature-list-image {
+    max-width: 537px;
+    max-height: 500px;
+  }
+}
+
+.discover {
+  @include flexCenter(row);
+  flex-wrap: wrap;
+  padding-top: 20px;
+  .discover-right {
+    padding-right: 20px;
+    h3 {
+      color: $black;
+      font-size: 350%;
+      line-height: 100%;
+      text-align: center;
+      font-weight: $f-bold;
+      margin-bottom: 43px;
+    }
+  }
+  .discover-image {
+    max-height: 500px;
+  }
+}
+
+.feedbacks {
+  background-color: $link;
+  color: $white;
+  h3 {
+    font-size: 300%;
+    text-align: center;
+    line-height: 150%;
+    font-weight: $f-medium;
+    padding: 40px;
+  }
+  .blockquotes {
+    display: flex;
+    justify-content: center;
+    blockquote:before {
+      display: block;
+      content: "\201C";
+      font-size: 300%;
+      line-height: 0%;
+    }
+    blockquote {
+      width: 25%;
+      padding: 20px 10px;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: $white;
+  padding: 40px;
+  background-color: $darkblue;
+}
+
+.button-download {
+  height: 62px;
+  float: left;
+  font: $f-medium 11px/13px $fontCaption;
+  padding-left: 61px;
+  padding-right: 0;
+  width: 180px;
+  text-align: left;
+  margin: 0 10px 20px;
+  position: relative;
+  @include sizing;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    @extend %sprite;
+    background-position: -100px 0;
+  }
+  &.android {
+    &:after {
+      background-position: -150px 0;
+    }
+  }
+}
+.button-download-title {
+  padding: 11px 0 1px;
+  display: block;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+}
+.button-download-subtitle {
+  display: block;
+  font-size: 21px;
+  line-height: 23px;
+  text-align: left;
+}
