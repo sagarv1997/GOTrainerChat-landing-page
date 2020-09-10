@@ -420,8 +420,7 @@ header .main-flexbox .header-img {
 }
 
 .features-list .feature-list-image {
-  max-width: 537px;
-  max-height: 500px;
+  max-width: 100%;
 }
 
 .discover {
@@ -458,6 +457,7 @@ header .main-flexbox .header-img {
 
 .discover .discover-image {
   max-height: 500px;
+  max-width: 100%;
 }
 
 .feedbacks {
@@ -578,6 +578,9 @@ footer {
     width: 90%;
     padding: 20px 20px;
     text-align: center;
+  }
+  .features-list {
+    overflow: hidden;
   }
   .features-list .feature-list-left {
     max-width: 90%;
